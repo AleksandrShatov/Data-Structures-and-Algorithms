@@ -69,5 +69,35 @@ public class HighArray {
         }
     }
 
+//    public long removeMax() {
+//        long max = getMax();
+//        if(max != -1) {
+//            delete(max);
+//        }
+//        return max;
+//    }
+
+    public long removeMax() {
+        if(nElems == 0) {
+            return -1;
+        } else {
+            int maxIn = 0;
+            long max = a[maxIn];
+            for (int i = 1; i < nElems; i++) {
+                if(a[i] > max) {
+                    maxIn = i;
+                    max = a[maxIn];
+                }
+            }
+
+            for (int k = maxIn; k < nElems - 1; k++) {
+                a[k] = a[k+1];
+            }
+            nElems--;
+
+            return max;
+        }
+    }
+
 
 }

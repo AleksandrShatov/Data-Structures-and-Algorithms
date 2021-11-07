@@ -22,6 +22,8 @@ public class HighArrayApp {
 
         arr.display();
 
+        arr.removeMax();
+
         int searchKey = 35;
         if(arr.find(searchKey)) {
             System.out.println("Found " + searchKey);
@@ -40,6 +42,8 @@ public class HighArrayApp {
         System.out.println(arr.delete(55));
         System.out.println(arr.delete(99));
         System.out.println(arr.delete(100));
+
+        arr.removeMax();
 
         arr.display();
 
