@@ -29,12 +29,27 @@ public class HighArrayApp {
             System.out.println("Can't find " + searchKey);
         }
 
+        long max = arr.getMax();
+        if(max == -1) {
+            System.out.println("Array is empty!");
+        } else {
+            System.out.println("Max element is " + max);
+        }
+
         System.out.println(arr.delete(00));
         System.out.println(arr.delete(55));
         System.out.println(arr.delete(99));
         System.out.println(arr.delete(100));
 
         arr.display();
+
+        max = arr.getMax();
+        if(max == -1) {
+            System.out.println("Array is empty!");
+        } else {
+            System.out.println("Max element is " + max);
+        }
+
 
     }
 }
