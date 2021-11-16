@@ -7,8 +7,10 @@ public class BubbleSortApp {
         arr = new ArrayBub(maxSize);
 
         for (int i = 0; i < maxSize; i++) {
-            long n = (long)(java.lang.Math.random()*(maxSize - 1));
-            arr.insert(n);
+//            long n = (long)(java.lang.Math.random()*(maxSize - 1));
+//            arr.insert(n);
+
+            arr.insert(maxSize - i - 1);
         }
 
         long startTime = System.currentTimeMillis();
