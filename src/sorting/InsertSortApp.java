@@ -10,7 +10,9 @@ public class InsertSortApp {
 //            long n = (long)(java.lang.Math.random()*(maxSize - 1));
 //            arr.insert(n);
 
-            arr.insert(maxSize - i - 1);
+//            arr.insert(maxSize - i - 1);
+
+            arr.insert(i);
         }
 
         long startTime = System.currentTimeMillis();
