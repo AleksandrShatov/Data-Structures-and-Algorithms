@@ -2,26 +2,26 @@ package sorting;
 
 public class SelectSortApp {
     public static void main(String[] args) {
-        int maxSize = 100;
+        int maxSize = 120000;
         ArraySel arr;
         arr = new ArraySel(maxSize);
 
-        arr.insert(77);
-        arr.insert(99);
-        arr.insert(44);
-        arr.insert(55);
-        arr.insert(22);
-        arr.insert(88);
-        arr.insert(11);
-        arr.insert(00);
-        arr.insert(66);
-        arr.insert(33);
+        for (int i = 0; i < maxSize; i++) {
+            long n = (long)(java.lang.Math.random()*(maxSize - 1));
+            arr.insert(n);
+        }
 
-        arr.display();
+        long startTime = System.currentTimeMillis();
+
+//        arr.display();
 
         arr.selectionSort();
 
-        arr.display();
+//        arr.display();
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("Delta time is: " + (endTime - startTime) + " ms");
     }
 
 }
